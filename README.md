@@ -16,28 +16,13 @@ This module creates AWS Cloudwatch Metric Alarms and an alarm action in case the
 ```hcl
 module "cloudwatch-amazing-name-here" {
   # example
-  source                     = "git::https://git.zoi.de/generic/tf-modules/aws-generic-recommended-opensearch-cloudwatch-metrics"
+  source                     = "git::https://github.com/zoitech/terraform-aws-opensearch-cloudwatch-metrics.git"
   
   
   alarm_actions = ["lambda-arn"]
   number_of_nodes_in_cluster = 3
 }
 ```
-
-### Referencing a Version Tag
-
-Please refer to [CHANGELOG.md](CHANGELOG.md) for the latest release.
-
-```hcl
-module "cloudwatch-amazing-name-here" {
-  source = "git::https://git.zoi.de/generic/tf-modules/aws-generic-recommended-opensearch-cloudwatch-metrics.git?ref=1.0.0" 
-}
-```
-
-For more information on Terraform procedures within ZOI:
-[Zoi Terraform Guidelines](https://docs.google.com/document/d/12jQi3rxuwLTHh1aausbAMimVreiweiUFVSLCeof08vM)
-
-
 
 ## Requirements
 
